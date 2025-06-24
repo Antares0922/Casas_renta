@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  scraper:
+    build: .
+    volumes:
+      - ./scripts_py:/app/scripts_py  # Monta tu carpeta local en el contenedor
+    working_dir: /app
+    tty: true
+    stdin_open: true
+
